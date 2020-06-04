@@ -123,8 +123,8 @@ int main()
     q6.setValues("6. Should you wear a mask to protect yourself when you go outside?",
         "Yes – Wear a mask at all times to prevent COVID-19",
         "No – You don’t need to wear a mask if you’re healthy and not caring for a sick person",
-        " ",
-        " ",
+        "Theres no point of wearing a mask",
+        "Masks are for losers",
         'b',
         4);
 
@@ -155,8 +155,8 @@ int main()
     q10.setValues("10. Are people living with HIV always more at risk? ",
         "Yes – people with HIV have weaker immune systems",
         "No – people who adhere to antiretroviral treatment (ART) and have a high CD4 count aren’t more at risk",
-        " ",
-        " ",
+        "It may be or maay not be always at risk",
+        "All of the above",
         'b',
         4);
 
