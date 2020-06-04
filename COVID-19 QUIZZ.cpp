@@ -28,32 +28,31 @@ int main()
 {
 
     std::cout << R"(
-
                ————————————————————————————————————————————————————————————————————————
                                   WELCOME TO THE C++ COVID-19 QUIZZ!
                ————————————————————————————————————————————————————————————————————————
     )" << "\n";
 
-    std::cout << "Press enter to start...\n";
+    std::cout << "Press enter to start!!\n";
     std::cin.get();
 
-    //Вземете името на потребителя
+    //Пита потребителя за име
     std::string name;
     std::cout << "What's your name?\n";
     std::cin >> name;
     std::cout << "\n";
 
-    //Попитайте дали потребителят иска да започне тест
+    //Пита дали потребителят иска да започне тест
     std::string respond;
-    std::cout << "Are you ready to start " << name << "? Yes/No.\n";
+    std::cout << "Are you ready to start " << name << "? Y/N.\n";
     std::cin >> respond;
 
-    //Ако потребителят каже „да“, тестът започва
-    if (respond == "Yes" || respond == "yes") {
+    //Ако потребителят каже „да“ тестът започва
+    if (respond == "Y" || respond == "y") {
         std::cout << "\n";
         std::cout << "Good luck!\n";
         std::cout << "\n";
-        std::cout << "Press enter to continue.";
+        std::cout << "Press enter to continue!!";
         std::cin.get();
         std::cin.ignore();
     }else{
@@ -62,10 +61,10 @@ int main()
         std::cin.ignore();
         std::cin.get();
         return 0;
-    }//Else, quiz ends.
+    }//Приключва quizz-a
 
     //Екземпляри на въпросите
-    //10 въпроса, генерирани общо за тази викторина
+    //10 въпроса, генерирани общо за този quizz
     
     Question q1;
     Question q2;
@@ -78,7 +77,7 @@ int main()
     Question q9;
     Question q10;
 
-    //Повикване на функцията на член setValues
+    //Повикване на функцията на setValues
     //Въпросът е зададен, 4 варианта за избор на отговор, правилен отговор, 4 точки на въпрос
 
     q1.setValues("1. How is COVID-19 passed on?",
@@ -161,7 +160,7 @@ int main()
         'b',
         4);
 
-    //Извикване на askQuestion член функция
+    //askQuestion член функция
     q1.askQuestion();
     q2.askQuestion();
     q3.askQuestion();
@@ -173,18 +172,16 @@ int main()
     q9.askQuestion();
     q10.askQuestion();
 
-    //Крайният резултат се показва, когато потребителят приключи с теста
+    //Крайният резултат се показва, когато потребителят приключи с quizz-а
     std::cout << "Your Total Score is " << total << " out of 40!\n";
     std::cout << "\n";
 
-    //Потребителят оценява над 35, потребителят преминава теста
+    //Ако потребителя има над 35 точки, той преминава/печели
     if (total > 35) {
         std::cout << R"(
-
                ————————————————————————————————————————————————————————————————————————
                          GOOD JOB! YOU HAVE PASSED THE QUIZ! HAVE A GOOD DAY!
                ————————————————————————————————————————————————————————————————————————
-
     )" << "\n";
         std::cout << "\n";
         std::cin.get();
@@ -228,7 +225,7 @@ void Question::askQuestion()
     //Потребителят въвежда отговора си
     std::cout << "What is your answer?" << "\n";
     std::cin >> guess;
-    //Ако отговорът е правилен, се показва съобщение и към тях се добавят 4 точки
+    //Ако отговорът е правилен, се показва съобщение и се добавят 4 точки
     if (guess == correct_answer) {
         std::cout << "\n";
         std::cout << "Correct!" << "\n";
@@ -238,14 +235,14 @@ void Question::askQuestion()
         std::cin.get();
         std::cin.ignore();
     }
-    else //Ако отговорът е неправилен, се показва съобщение, не се добавят точки
+    else //Ако отговорът е неправилен, се показва съобщение и не се добавят точки
          //Показва се правилен отговор
     {
         std::cout << "\n";
         std::cout << "Think again!" << "\n";
-        std::cout << "The correct answer is " << correct_answer << "." << "\n";
+        std::cout << "The correct answer is " << correct_answer << "!!" << "\n";
         std::cout << "\n";
-        std::cout << "Press enter to continue." << "\n";
+        std::cout << "Press enter to continue!" << "\n";
         std::cin.get();
         std::cin.ignore();
     }
