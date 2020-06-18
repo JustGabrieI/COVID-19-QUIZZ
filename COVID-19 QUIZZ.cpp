@@ -180,7 +180,7 @@ int main()
     if (total > 35) {
         std::cout << R"(
                ————————————————————————————————————————————————————————————————————————
-                         GOOD JOB! YOU HAVE PASSED THE QUIZ! HAVE A GOOD DAY!
+                GOOD JOB! YOU HAVE PASSED THE QUIZ! HAVE A GOOD DAY AND STAY AT HOME!!
                ————————————————————————————————————————————————————————————————————————
     )" << "\n";
         std::cout << "\n";
